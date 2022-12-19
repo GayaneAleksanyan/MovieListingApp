@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MovieListingApp</string>
+    <string name="disclaimer">Pictures are from movieposters.com</string>
+    <string name="avatar">Avatar</string>
+    <string name="elemental">Elemental</string>
+    <string name="inferno">Inferno</string>
+    <string name="marcel">Marcel</string>
+    <string name="button_Menu">Menu</string>
+    <string name="favourites">Favourites</string>
+    <string name="watch_later">Watch Later</string>
+    <string name="selections">Selections</string>
+    <string name="settings">Settings</string>
 </resources>
