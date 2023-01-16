@@ -10,28 +10,37 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        initButtons()
+        initNavigation()
     }
 
-    fun initButtons() {
-        button_menu.setOnClickListener {
-            Toast.makeText(this, "Menu", Toast.LENGTH_SHORT).show()
+    private fun initNavigation() {
+        topBar.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.settings -> {
+                    Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
+
         }
 
-        button_favourites.setOnClickListener {
-            Toast.makeText(this, "Favourites", Toast.LENGTH_SHORT).show()
-        }
-
-        button_watchLater.setOnClickListener {
-            Toast.makeText(this, "Watch Later", Toast.LENGTH_SHORT).show()
-        }
-
-        button_selections.setOnClickListener {
-            Toast.makeText(this, "Selections", Toast.LENGTH_SHORT).show()
-        }
-
-        button_settings.setOnClickListener {
-            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show()
+        bottom_navigation.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.favorites -> {
+                    Toast.makeText(this, "Favorites", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.watch_later -> {
+                    Toast.makeText(this, "Watch Later", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.selections -> {
+                    Toast.makeText(this, "Selections", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
         }
     }
 }
