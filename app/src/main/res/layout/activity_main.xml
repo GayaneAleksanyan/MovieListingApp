@@ -113,68 +113,68 @@
             android:id="@+id/imageView5"
             android:layout_width="@dimen/gridLayout_width"
             android:layout_height="@dimen/gridlayout_height"
+            android:clickable="true"
+            android:focusable="true"
+            android:stateListAnimator="@animator/click"
             app:cardCornerRadius="@dimen/gridlayout_radius">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clickable="true"
+                android:contentDescription="@string/dual"
                 android:scaleType="centerCrop"
-                android:src="@drawable/dual"
-                android:stateListAnimator="@animator/click"
-                android:focusable="true"
-                android:contentDescription="@string/dual" />
+                android:src="@drawable/dual" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/imageView6"
             android:layout_width="@dimen/gridLayout_width"
             android:layout_height="@dimen/gridlayout_height"
+            android:clickable="true"
+            android:focusable="true"
+            android:stateListAnimator="@animator/click"
             app:cardCornerRadius="@dimen/gridlayout_radius">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clickable="true"
+                android:contentDescription="@string/the_family"
                 android:scaleType="centerCrop"
-                android:src="@drawable/the_family"
-                android:stateListAnimator="@animator/click"
-                android:focusable="true"
-                android:contentDescription="@string/the_family" />
+                android:src="@drawable/the_family" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/imageView7"
             android:layout_width="@dimen/gridLayout_width"
             android:layout_height="@dimen/gridlayout_height"
+            android:clickable="true"
+            android:focusable="true"
+            android:stateListAnimator="@animator/click"
             app:cardCornerRadius="@dimen/gridlayout_radius">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clickable="true"
+                android:contentDescription="@string/turning_red"
                 android:scaleType="centerCrop"
-                android:src="@drawable/turning_red"
-                android:stateListAnimator="@animator/click"
-                android:focusable="true"
-                android:contentDescription="@string/turning_red" />
+                android:src="@drawable/turning_red" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/imageView8"
             android:layout_width="@dimen/gridLayout_width"
             android:layout_height="@dimen/gridlayout_height"
+            android:clickable="true"
+            android:focusable="true"
+            android:stateListAnimator="@animator/click"
             app:cardCornerRadius="@dimen/gridlayout_radius">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clickable="true"
+                android:contentDescription="@string/garden_state"
                 android:scaleType="centerCrop"
-                android:src="@drawable/garden_state"
-                android:stateListAnimator="@animator/click"
-                android:focusable="true"
-                android:contentDescription="@string/garden_state" />
+                android:src="@drawable/garden_state" />
         </androidx.cardview.widget.CardView>
 
 
