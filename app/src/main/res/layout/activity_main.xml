@@ -110,11 +110,10 @@
         app:layout_constraintTop_toBottomOf="@+id/disclaimer">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/imageView5"
+            android:id="@+id/poster1"
             android:layout_width="@dimen/gridLayout_width"
             android:layout_height="@dimen/gridlayout_height"
             android:clickable="true"
-            android:focusable="true"
             android:stateListAnimator="@animator/click"
             app:cardCornerRadius="@dimen/gridlayout_radius">
 
@@ -127,11 +126,10 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/imageView6"
+            android:id="@+id/poster2"
             android:layout_width="@dimen/gridLayout_width"
             android:layout_height="@dimen/gridlayout_height"
             android:clickable="true"
-            android:focusable="true"
             android:stateListAnimator="@animator/click"
             app:cardCornerRadius="@dimen/gridlayout_radius">
 
@@ -144,11 +142,10 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/imageView7"
+            android:id="@+id/poster3"
             android:layout_width="@dimen/gridLayout_width"
             android:layout_height="@dimen/gridlayout_height"
             android:clickable="true"
-            android:focusable="true"
             android:stateListAnimator="@animator/click"
             app:cardCornerRadius="@dimen/gridlayout_radius">
 
@@ -161,11 +158,10 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/imageView8"
+            android:id="@+id/poster4"
             android:layout_width="@dimen/gridLayout_width"
             android:layout_height="@dimen/gridlayout_height"
             android:clickable="true"
-            android:focusable="true"
             android:stateListAnimator="@animator/click"
             app:cardCornerRadius="@dimen/gridlayout_radius">
 
