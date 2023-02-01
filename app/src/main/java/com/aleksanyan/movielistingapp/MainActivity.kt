@@ -1,6 +1,7 @@
 package com.aleksanyan.movielistingapp
 
 import android.os.Bundle
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -11,7 +12,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         initNavigation()
+
+        val myAnimation = AnimationUtils.loadAnimation(this, R.anim.poster_animation)
     }
+
+
 
     private fun initNavigation() {
         topBar.setOnMenuItemClickListener {
@@ -43,4 +48,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 }

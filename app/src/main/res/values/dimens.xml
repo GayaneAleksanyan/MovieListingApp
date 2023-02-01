@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="linear_layout_width">300dp</dimen>
-    <dimen name="frame_layout_height">70dp</dimen>
     <dimen name="cardView_layout_height">100dp</dimen>
     <dimen name="cardView_layout_margin">10dp</dimen>
     <dimen name="cardView_layout_elevation">5dp</dimen>
@@ -10,5 +8,9 @@
     <dimen name="textView_layout_margin_top">16dp</dimen>
     <dimen name="textView_layout_margin_end">16dp</dimen>
     <dimen name="textView_minHeight">48dp</dimen>
+    <dimen name="gridLayout_margin">16dp</dimen>
+    <dimen name="gridLayout_width">150dp</dimen>
+    <dimen name="gridlayout_height">200dp</dimen>
+    <dimen name="gridlayout_radius">15dp</dimen>
 
 </resources>
