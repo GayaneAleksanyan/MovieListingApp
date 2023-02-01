@@ -83,6 +83,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
+        android:id="@+id/disclaimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/textView_layout_margin_top"
@@ -95,6 +96,89 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/top_bar" />
 
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/gridLayout_margin"
+        android:columnCount="2"
+        android:layoutAnimation="@anim/layout_animation"
+        android:orientation="horizontal"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disclaimer">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imageView5"
+            android:layout_width="@dimen/gridLayout_width"
+            android:layout_height="@dimen/gridlayout_height"
+            app:cardCornerRadius="@dimen/gridlayout_radius">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dual"
+                android:stateListAnimator="@animator/click"
+                android:focusable="true"
+                android:contentDescription="@string/dual" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imageView6"
+            android:layout_width="@dimen/gridLayout_width"
+            android:layout_height="@dimen/gridlayout_height"
+            app:cardCornerRadius="@dimen/gridlayout_radius">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/the_family"
+                android:stateListAnimator="@animator/click"
+                android:focusable="true"
+                android:contentDescription="@string/the_family" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imageView7"
+            android:layout_width="@dimen/gridLayout_width"
+            android:layout_height="@dimen/gridlayout_height"
+            app:cardCornerRadius="@dimen/gridlayout_radius">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/turning_red"
+                android:stateListAnimator="@animator/click"
+                android:focusable="true"
+                android:contentDescription="@string/turning_red" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imageView8"
+            android:layout_width="@dimen/gridLayout_width"
+            android:layout_height="@dimen/gridlayout_height"
+            app:cardCornerRadius="@dimen/gridlayout_radius">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/garden_state"
+                android:stateListAnimator="@animator/click"
+                android:focusable="true"
+                android:contentDescription="@string/garden_state" />
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
