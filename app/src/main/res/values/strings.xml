@@ -1,17 +1,10 @@
 <resources>
     <string name="app_name">MovieListingApp</string>
-    <string name="disclaimer">Pictures are from movieposters.com</string>
-    <string name="avatar">Avatar</string>
-    <string name="elemental">Elemental</string>
-    <string name="inferno">Inferno</string>
-    <string name="marcel">Marcel</string>
-    <string name="page_title">Search it!</string>
-    <string name="menu_settings_title">Settings</string>
-    <string name="menu_favorites_title">Favorites</string>
-    <string name="menu_watch_later_title">Watch Later</string>
-    <string name="menu_selections_title">Selections</string>
-    <string name="dual">Dual</string>
-    <string name="the_family">The_Family</string>
-    <string name="turning_red">Turning_Red</string>
-    <string name="garden_state">Garden_State</string>
+    <string name="film_card">detailed_film_card</string>
+    <string name="title">TITLE</string>
+    <string name="share">Share</string>
+    <string name="home">Home</string>
+    <string name="favorites">Favorites</string>
+    <string name="watch_later">Watch Later</string>
+    <string name="selections">Selections</string>
 </resources>
