@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aleksanyan.movielistingapp.databinding.FragmentHomeBinding
@@ -58,7 +57,7 @@ class HomeFragment : Fragment() {
 
         initRecycler()
 
-        viewModel.filmsListLiveData.observe(viewLifecycleOwner, Observer<List<Film>> {
+        viewModel.filmsListData.observe(viewLifecycleOwner, {
             filmsDataBase = it
         })
     }
@@ -82,8 +81,8 @@ class HomeFragment : Fragment() {
                     }
                 }
                 val result = filmsDataBase.filter {
-                    it.title.toLowerCase(Locale.getDefault())
-                        .contains(newText!!.toLowerCase(Locale.getDefault()))
+                    it.title.lowercase(Locale.getDefault())
+                        .contains(newText!!.lowercase(Locale.getDefault()))
                 }
                 filmsAdapter.addItems(result)
                 return true
