@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.aleksanyan.movielistingapp.databinding.FragmentWatchLaterBinding
 import com.aleksanyan.movielistingapp.utils.AnimationHelper
-import kotlinx.android.synthetic.main.fragment_watch_later.*
+import kotlinx.android.synthetic.main.fragment_watch_later.watch_later_fragment_root
 
 class WatchLaterFragment : Fragment() {
     private lateinit var binding: FragmentWatchLaterBinding

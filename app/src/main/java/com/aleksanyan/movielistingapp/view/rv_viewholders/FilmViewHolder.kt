@@ -2,6 +2,7 @@ package com.aleksanyan.movielistingapp.view.rv_viewholders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.aleksanyan.movielistingapp.data.Entity.ApiConstants
 import com.aleksanyan.movielistingapp.domain.Film
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.film_item.view.*
@@ -17,7 +18,7 @@ class FilmViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         title.text = film.title
 
         Glide.with(itemView)
-            .load(film.poster)
+            .load(ApiConstants.IMAGES_URL + "w342" + film.poster)
             .centerCrop()
             .into(image)
 
