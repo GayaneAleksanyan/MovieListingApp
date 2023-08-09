@@ -14,8 +14,10 @@ import com.aleksanyan.movielistingapp.view.MainActivity
 import com.aleksanyan.movielistingapp.view.rv_adapters.FilmListRecyclerAdapter
 import com.aleksanyan.movielistingapp.view.rv_adapters.TopSpacingItemDecoration
 import com.aleksanyan.movielistingapp.viewmodel.HomeFragmentViewModel
-import kotlinx.android.synthetic.main.fragment_home.*
-import java.util.*
+import kotlinx.android.synthetic.main.fragment_home.home_fragment_root
+import kotlinx.android.synthetic.main.fragment_home.main_recycler
+import kotlinx.android.synthetic.main.fragment_home.search_view
+import java.util.Locale
 
 class HomeFragment : Fragment() {
     private val viewModel by lazy {
@@ -57,7 +59,7 @@ class HomeFragment : Fragment() {
 
         initRecycler()
 
-        viewModel.filmsListData.observe(viewLifecycleOwner, {
+        viewModel.filmsListLiveData.observe(viewLifecycleOwner, {
             filmsDataBase = it
         })
     }
@@ -73,16 +75,14 @@ class HomeFragment : Fragment() {
                 return true
             }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                if (newText != null) {
-                    if (newText.isEmpty()) {
-                        filmsAdapter.addItems(filmsDataBase)
-                        return true
-                    }
+            override fun onQueryTextChange(newText: String): Boolean {
+                if (newText.isEmpty()) {
+                    filmsAdapter.addItems(filmsDataBase)
+                    return true
                 }
                 val result = filmsDataBase.filter {
                     it.title.lowercase(Locale.getDefault())
-                        .contains(newText!!.lowercase(Locale.getDefault()))
+                        .contains(newText.lowercase(Locale.getDefault()))
                 }
                 filmsAdapter.addItems(result)
                 return true

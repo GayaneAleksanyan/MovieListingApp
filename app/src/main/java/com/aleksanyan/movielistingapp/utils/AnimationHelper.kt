@@ -12,6 +12,7 @@ object AnimationHelper {
     private const val menuItems = 4
 
     fun performFragmentCircularRevealAnimation(rootView: View, activity: Activity, position: Int) {
+
         Executors.newSingleThreadExecutor().execute {
             while (true) {
                 if (rootView.isAttachedToWindow) {

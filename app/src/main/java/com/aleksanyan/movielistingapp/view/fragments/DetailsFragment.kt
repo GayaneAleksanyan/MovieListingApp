@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.aleksanyan.movielistingapp.domain.Film
 import com.aleksanyan.movielistingapp.R
+import com.aleksanyan.movielistingapp.data.Entity.ApiConstants
 import com.aleksanyan.movielistingapp.databinding.FragmentDetailsBinding
+import com.bumptech.glide.Glide
 
 class DetailsFragment : Fragment() {
     private lateinit var film: Film
@@ -52,7 +54,12 @@ class DetailsFragment : Fragment() {
         film = arguments?.get("film") as Film
 
         binding.detailsToolbar.title = film.title
-        binding.detailsPoster.setImageResource(film.poster)
+
+        Glide.with(this)
+            .load(ApiConstants.IMAGES_URL + "w780" + film.poster)
+            .centerCrop()
+            .into(binding.detailsPoster)
+
         binding.detailsDescription.text = film.description
 
         binding.detailsFabFavorites.setImageResource(
@@ -60,6 +67,4 @@ class DetailsFragment : Fragment() {
             else R.drawable.baseline_favorite_border_24
         )
     }
-
-
 }
