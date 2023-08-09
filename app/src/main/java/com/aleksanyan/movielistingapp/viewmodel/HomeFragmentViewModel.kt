@@ -2,13 +2,14 @@ package com.aleksanyan.movielistingapp.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.aleksanyan.movielistingapp.App
 import com.aleksanyan.movielistingapp.domain.Film
 import com.aleksanyan.movielistingapp.domain.Interactor
+import org.koin.core.KoinComponent
+import org.koin.core.inject
 
-class HomeFragmentViewModel : ViewModel() {
+class HomeFragmentViewModel : ViewModel(), KoinComponent {
     val filmsListLiveData: MutableLiveData<List<Film>> = MutableLiveData()
-    private var interactor: Interactor = App.instance.interactor
+    private val interactor: Interactor by inject()
 
     init {
         interactor.getFilmsFromApi(1, object : ApiCallback {
