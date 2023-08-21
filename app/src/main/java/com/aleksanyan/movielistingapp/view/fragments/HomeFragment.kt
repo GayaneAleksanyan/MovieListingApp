@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aleksanyan.movielistingapp.databinding.FragmentHomeBinding
@@ -59,7 +61,7 @@ class HomeFragment : Fragment() {
 
         initRecycler()
 
-        viewModel.filmsListLiveData.observe(viewLifecycleOwner, {
+        viewModel.filmsListLiveData.observe(viewLifecycleOwner, Observer<List<Film>> {
             filmsDataBase = it
         })
     }
@@ -69,8 +71,7 @@ class HomeFragment : Fragment() {
             search_view.isIconified = false
         }
 
-        search_view.setOnQueryTextListener(object :
-            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+        search_view.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return true
             }
