@@ -2,16 +2,20 @@ package com.aleksanyan.movielistingapp.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.aleksanyan.movielistingapp.App
 import com.aleksanyan.movielistingapp.domain.Film
 import com.aleksanyan.movielistingapp.domain.Interactor
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import javax.inject.Inject
 
-class HomeFragmentViewModel : ViewModel(), KoinComponent {
+
+class HomeFragmentViewModel : ViewModel() {
     val filmsListLiveData: MutableLiveData<List<Film>> = MutableLiveData()
-    private val interactor: Interactor by inject()
+
+    @Inject
+    lateinit var interactor: Interactor
 
     init {
+        App.instance.dagger.inject(this)
         interactor.getFilmsFromApi(1, object : ApiCallback {
             override fun onSuccess(films: List<Film>) {
                 filmsListLiveData.postValue(films)
