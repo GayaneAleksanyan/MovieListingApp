@@ -20,5 +20,6 @@
     <dimen name="rv_width">0dp</dimen>
     <dimen name="rv_margin">8dp</dimen>
     <dimen name="rv_height">0dp</dimen>
+    <dimen name="srl_height">0dp</dimen>
 
 </resources>

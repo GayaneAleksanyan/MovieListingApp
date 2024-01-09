@@ -1,6 +1,7 @@
 package com.aleksanyan.movielistingapp.di.modules
 
 import com.aleksanyan.movielistingapp.viewmodel.HomeFragmentViewModel
+import com.aleksanyan.movielistingapp.viewmodel.SettingsFragmentViewModel
 import dagger.Component
 import javax.inject.Singleton
 
@@ -14,4 +15,5 @@ import javax.inject.Singleton
 )
 interface AppComponent {
     fun inject(homeFragmentViewModel: HomeFragmentViewModel)
+    fun inject(settingsFragmentViewModel: SettingsFragmentViewModel)
 }

@@ -61,8 +61,11 @@ class HomeFragment : Fragment() {
 
         initRecycler()
 
+        initPullToRefresh()
+
         viewModel.filmsListLiveData.observe(viewLifecycleOwner, Observer<List<Film>> {
             filmsDataBase = it
+            filmsAdapter.addItems(it)
         })
     }
 
@@ -103,6 +106,14 @@ class HomeFragment : Fragment() {
             layoutManager = LinearLayoutManager(requireContext())
             val decorator = TopSpacingItemDecoration(8)
             addItemDecoration(decorator)
+        }
+    }
+
+    private fun initPullToRefresh() {
+        binding.pullToRefresh.setOnRefreshListener {
+            filmsAdapter.items.clear()
+            viewModel.getFilms()
+            binding.pullToRefresh.isRefreshing = false
         }
     }
 }

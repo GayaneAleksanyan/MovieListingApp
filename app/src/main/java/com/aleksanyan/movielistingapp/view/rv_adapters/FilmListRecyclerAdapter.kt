@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.film_item.view.*
 class FilmListRecyclerAdapter(private val clickListener: OnItemClickListener) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private val items = mutableListOf<Film>()
+    val items = mutableListOf<Film>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return FilmViewHolder(

@@ -7,4 +7,11 @@
     <string name="favorites">Favorites</string>
     <string name="watch_later">Watch Later</string>
     <string name="selections">Selections</string>
+    <string name="settings">Settings</string>
+    <string name="menu_settings_title_text">Settings</string>
+    <string name="radio_button_popular">Popular</string>
+    <string name="radio_button_top_rated">Top Rated</string>
+    <string name="radio_button_upcoming">Coming Soon</string>
+    <string name="radio_button_playing">Released</string>
+    <string name="radio_group_header">Random:</string>
 </resources>
