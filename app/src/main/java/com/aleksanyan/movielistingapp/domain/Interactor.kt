@@ -19,7 +19,11 @@ class Interactor(private val repository: MainRepository, private val retrofitSer
                 call: Call<TmdbResult>,
                 response: Response<TmdbResult>
             ) {
-                callback.onSuccess(Converter.convertApiListToDtoList(response.body()?.tmdbFilms))
+                val list = Converter.convertApiListToDtoList(response.body()?.tmdbFilms)
+                list.forEach {
+                    repository.putToDb(film = it)
+                }
+                callback.onSuccess(list)
             }
 
             override fun onFailure(call: Call<TmdbResult>, t: Throwable) {
@@ -32,4 +36,6 @@ class Interactor(private val repository: MainRepository, private val retrofitSer
         preferences.saveDefaultCategory(category)
     }
     fun getDefaultCategoryFromPreference() = preferences.getDefaultCategory()
+
+    fun getFilmsFromDB(): List<Film> = repository.getAllFromDB()
 }
