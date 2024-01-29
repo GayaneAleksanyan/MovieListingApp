@@ -13,5 +13,5 @@
     <string name="radio_button_top_rated">Top Rated</string>
     <string name="radio_button_upcoming">Coming Soon</string>
     <string name="radio_button_playing">Released</string>
-    <string name="radio_group_header">Random:</string>
+    <string name="radio_group_header">Order by:</string>
 </resources>
