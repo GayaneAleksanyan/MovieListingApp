@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aleksanyan.movielistingapp.databinding.FragmentFavoritesBinding
-import com.aleksanyan.movielistingapp.domain.Film
+import com.aleksanyan.movielistingapp.data.entity.Film
 import com.aleksanyan.movielistingapp.utils.AnimationHelper
 import com.aleksanyan.movielistingapp.view.MainActivity
 import com.aleksanyan.movielistingapp.view.rv_adapters.FilmListRecyclerAdapter

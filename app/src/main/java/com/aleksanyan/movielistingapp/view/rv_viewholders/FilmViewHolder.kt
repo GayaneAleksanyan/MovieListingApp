@@ -2,8 +2,8 @@ package com.aleksanyan.movielistingapp.view.rv_viewholders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.aleksanyan.movielistingapp.data.Entity.ApiConstants
-import com.aleksanyan.movielistingapp.domain.Film
+import com.aleksanyan.movielistingapp.data.entity.ApiConstants
+import com.aleksanyan.movielistingapp.data.entity.Film
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.film_item.view.*
 

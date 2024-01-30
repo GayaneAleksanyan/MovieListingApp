@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.aleksanyan.movielistingapp.R
 import com.aleksanyan.movielistingapp.databinding.ActivityMainBinding
-import com.aleksanyan.movielistingapp.domain.Film
+import com.aleksanyan.movielistingapp.data.entity.Film
 import com.aleksanyan.movielistingapp.view.fragments.*
 
 class MainActivity : AppCompatActivity() {

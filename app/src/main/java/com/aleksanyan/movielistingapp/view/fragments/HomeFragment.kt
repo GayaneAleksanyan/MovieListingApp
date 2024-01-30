@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aleksanyan.movielistingapp.databinding.FragmentHomeBinding
-import com.aleksanyan.movielistingapp.domain.Film
+import com.aleksanyan.movielistingapp.data.entity.Film
 import com.aleksanyan.movielistingapp.utils.AnimationHelper
 import com.aleksanyan.movielistingapp.view.MainActivity
 import com.aleksanyan.movielistingapp.view.rv_adapters.FilmListRecyclerAdapter

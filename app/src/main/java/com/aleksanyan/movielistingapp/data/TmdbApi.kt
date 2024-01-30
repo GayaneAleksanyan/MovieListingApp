@@ -1,6 +1,6 @@
 package com.aleksanyan.movielistingapp.data
 
-import com.aleksanyan.movielistingapp.data.Entity.TmdbResult
+import com.aleksanyan.movielistingapp.data.entity.TmdbResult
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

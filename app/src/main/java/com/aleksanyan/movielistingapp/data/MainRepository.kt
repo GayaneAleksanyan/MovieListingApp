@@ -1,38 +1,17 @@
 package com.aleksanyan.movielistingapp.data
 
-import android.content.ContentValues
-import android.database.Cursor
-import com.aleksanyan.movielistingapp.data.db.DatabaseHelper
-import com.aleksanyan.movielistingapp.domain.Film
+import com.aleksanyan.movielistingapp.data.entity.Film
+import com.aleksanyan.movielistingapp.data.dao.FilmDao
+import java.util.concurrent.Executors
 
-class MainRepository(databaseHelper: DatabaseHelper) {
-    private val sqlDb = databaseHelper.readableDatabase
-    private lateinit var cursor: Cursor
-
-    fun putToDb(film: Film) {
-        val cv = ContentValues()
-        cv.apply {
-            put(DatabaseHelper.COLUMN_TITLE, film.title)
-            put(DatabaseHelper.COLUMN_POSTER, film.poster)
-            put(DatabaseHelper.COLUMN_DESCRIPTION, film.description)
-            put(DatabaseHelper.COLUMN_RATING, film.rating)
+class MainRepository(private val filmDao: FilmDao) {
+    fun putToDb(films: List<Film>) {
+        Executors.newSingleThreadExecutor().execute {
+            filmDao.insertAll(films)
         }
-        sqlDb.insert(DatabaseHelper.TABLE_NAME, null, cv)
     }
 
     fun getAllFromDB(): List<Film> {
-        cursor = sqlDb.rawQuery("SELECT * FROM ${DatabaseHelper.TABLE_NAME}", null)
-        val result = mutableListOf<Film>()
-        if (cursor.moveToFirst()) {
-            do {
-                val title = cursor.getString(1)
-                val poster = cursor.getString(2)
-                val description = cursor.getString(3)
-                val rating = cursor.getDouble(4)
-
-                result.add(Film(title, poster, description, rating))
-            } while (cursor.moveToNext())
-        }
-        return result
+        return filmDao.getCachedFilms()
     }
 }

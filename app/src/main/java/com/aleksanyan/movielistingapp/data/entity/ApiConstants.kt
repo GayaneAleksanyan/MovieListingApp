@@ -1,4 +1,4 @@
-package com.aleksanyan.movielistingapp.data.Entity
+package com.aleksanyan.movielistingapp.data.entity
 
 object ApiConstants {
     const val BASE_URL = "https://api.themoviedb.org/"

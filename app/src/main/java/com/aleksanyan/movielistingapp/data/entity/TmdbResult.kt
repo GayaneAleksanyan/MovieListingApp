@@ -1,4 +1,4 @@
-package com.aleksanyan.movielistingapp.data.Entity
+package com.aleksanyan.movielistingapp.data.entity
 
 import com.google.gson.annotations.SerializedName
 
