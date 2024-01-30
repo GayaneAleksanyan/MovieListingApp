@@ -1,5 +1,6 @@
 package com.aleksanyan.movielistingapp.data.Entity
 
+import android.os.Parcel
 import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -16,4 +17,12 @@ data class Film(
     @ColumnInfo(name = "overview") val description: String,
     @ColumnInfo(name = "vote_average") val rating: Double = 0.0,
     var isInFavorites: Boolean = false
-) : Parcelable
+) : Parcelable {
+    override fun describeContents(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun writeToParcel(p0: Parcel?, p1: Int) {
+        TODO("Not yet implemented")
+    }
+}

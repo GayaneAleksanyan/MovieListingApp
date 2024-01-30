@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.aleksanyan.movielistingapp.view.rv_viewholders.FilmViewHolder
 import com.aleksanyan.movielistingapp.R
-import com.aleksanyan.movielistingapp.data.entity.Film
+import com.aleksanyan.movielistingapp.data.Entity.Film
 import kotlinx.android.synthetic.main.film_item.view.*
 
 class FilmListRecyclerAdapter(private val clickListener: OnItemClickListener) :

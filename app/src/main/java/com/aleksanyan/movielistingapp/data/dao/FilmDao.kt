@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.aleksanyan.movielistingapp.data.Entity.Film
 import com.aleksanyan.movielistingapp.data.entity.Film
 
 @Dao
