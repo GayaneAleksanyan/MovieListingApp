@@ -1,7 +1,7 @@
 package com.aleksanyan.movielistingapp.di.modules
 
 import com.aleksanyan.movielistingapp.BuildConfig
-import com.aleksanyan.movielistingapp.data.Entity.ApiConstants
+import com.aleksanyan.movielistingapp.data.entity.ApiConstants
 import com.aleksanyan.movielistingapp.data.TmdbApi
 import dagger.Module
 import dagger.Provides

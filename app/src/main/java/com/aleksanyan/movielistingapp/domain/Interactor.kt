@@ -1,7 +1,8 @@
 package com.aleksanyan.movielistingapp.domain
 
-import com.aleksanyan.movielistingapp.data.Entity.API
-import com.aleksanyan.movielistingapp.data.Entity.TmdbResult
+import com.aleksanyan.movielistingapp.data.Entity.Film
+import com.aleksanyan.movielistingapp.data.entity.API
+import com.aleksanyan.movielistingapp.data.entity.TmdbResult
 import com.aleksanyan.movielistingapp.data.MainRepository
 import com.aleksanyan.movielistingapp.data.TmdbApi
 import com.aleksanyan.movielistingapp.data.preferences.PreferenceProvider
@@ -20,9 +21,8 @@ class Interactor(private val repository: MainRepository, private val retrofitSer
                 response: Response<TmdbResult>
             ) {
                 val list = Converter.convertApiListToDtoList(response.body()?.tmdbFilms)
-                list.forEach {
-                    repository.putToDb(film = it)
-                }
+
+                repository.putToDb(list)
                 callback.onSuccess(list)
             }
 
@@ -31,7 +31,6 @@ class Interactor(private val repository: MainRepository, private val retrofitSer
             }
         })
     }
-
     fun saveDefaultCategoryToPreferences(category: String) {
         preferences.saveDefaultCategory(category)
     }

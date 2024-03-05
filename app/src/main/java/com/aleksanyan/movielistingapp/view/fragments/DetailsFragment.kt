@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.aleksanyan.movielistingapp.domain.Film
 import com.aleksanyan.movielistingapp.R
-import com.aleksanyan.movielistingapp.data.Entity.ApiConstants
+import com.aleksanyan.movielistingapp.data.Entity.Film
+import com.aleksanyan.movielistingapp.data.entity.ApiConstants
 import com.aleksanyan.movielistingapp.databinding.FragmentDetailsBinding
 import com.bumptech.glide.Glide
 

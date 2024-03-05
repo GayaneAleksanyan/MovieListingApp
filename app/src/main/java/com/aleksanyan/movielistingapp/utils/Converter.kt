@@ -1,7 +1,7 @@
 package com.aleksanyan.movielistingapp.utils
 
-import com.aleksanyan.movielistingapp.data.Entity.TmdbFilm
-import com.aleksanyan.movielistingapp.domain.Film
+import com.aleksanyan.movielistingapp.data.Entity.Film
+import com.aleksanyan.movielistingapp.data.entity.TmdbFilm
 
 object Converter {
     fun convertApiListToDtoList(list: List<TmdbFilm>?): List<Film> {
