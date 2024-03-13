@@ -4,15 +4,17 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.aleksanyan.movielistingapp.data.Entity.Film
 import com.aleksanyan.movielistingapp.data.entity.ApiConstants
+import com.aleksanyan.movielistingapp.databinding.FilmItemBinding
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.film_item.view.*
 
 class FilmViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    private val title = itemView.title
-    private val image = itemView.poster
-    private val description = itemView.description
+    private val filmItemBinding = FilmItemBinding.bind(itemView)
 
-    private val ratingDonut = itemView.rating_donut
+    private val title = filmItemBinding.title
+    private val image = filmItemBinding.poster
+    private val description = filmItemBinding.description
+
+    private val ratingDonut = filmItemBinding.ratingDonut
 
     fun bind(film: Film) {
         title.text = film.title

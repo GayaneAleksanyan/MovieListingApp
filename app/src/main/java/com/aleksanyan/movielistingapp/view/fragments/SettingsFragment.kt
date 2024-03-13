@@ -11,7 +11,6 @@ import com.aleksanyan.movielistingapp.R
 import com.aleksanyan.movielistingapp.databinding.FragmentSettingsBinding
 import com.aleksanyan.movielistingapp.utils.AnimationHelper
 import com.aleksanyan.movielistingapp.viewmodel.SettingsFragmentViewModel
-import kotlinx.android.synthetic.main.fragment_settings.settings_fragment_root
 
 class SettingsFragment : Fragment() {
     private lateinit var binding: FragmentSettingsBinding
@@ -31,7 +30,7 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         AnimationHelper.performFragmentCircularRevealAnimation(
-            settings_fragment_root,
+            binding.settingsFragmentRoot,
             requireActivity(),
             5
         )

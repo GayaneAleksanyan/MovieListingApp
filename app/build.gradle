@@ -1,18 +1,18 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-android-extensions'
-    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
+    id 'kotlin-parcelize'
+
 }
 
 android {
     namespace 'com.aleksanyan.movielistingapp'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.aleksanyan.movielistingapp"
         minSdk 21
-        //noinspection EditedTargetSdkVersion
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -43,14 +43,14 @@ android {
 dependencies {
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.7.20"
-    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.0'
 
 
     //Tests
@@ -61,7 +61,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.5.1'
 
     //MaterialDesign
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.android.material:material:1.11.0'
 
     //Coordinator layout
     implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
@@ -76,16 +76,14 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:3.12.6"
 
     //Paging
-    implementation 'androidx.paging:paging-common-ktx:3.1.1'
-    implementation 'androidx.paging:paging-runtime-ktx:3.1.1'
+    implementation 'androidx.paging:paging-common-ktx:3.2.1'
+    implementation 'androidx.paging:paging-runtime-ktx:3.2.1'
 
     //Dagger
-    implementation 'com.google.dagger:dagger:2.44'
-    kapt 'com.google.dagger:dagger-compiler:2.44'
+    implementation 'com.google.dagger:dagger:2.48'
+    ksp 'com.google.dagger:dagger-compiler:2.48'
 
     //Room
-    def room_version = "2.2.6"
-    implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
-
+    implementation 'androidx.room:room-runtime:2.6.1'
+    ksp("androidx.room:room-compiler:2.6.1")
 }
