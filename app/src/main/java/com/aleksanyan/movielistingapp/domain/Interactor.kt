@@ -1,5 +1,6 @@
 package com.aleksanyan.movielistingapp.domain
 
+import androidx.lifecycle.LiveData
 import com.aleksanyan.movielistingapp.data.Entity.Film
 import com.aleksanyan.movielistingapp.data.entity.API
 import com.aleksanyan.movielistingapp.data.entity.TmdbResult
@@ -23,7 +24,7 @@ class Interactor(private val repository: MainRepository, private val retrofitSer
                 val list = Converter.convertApiListToDtoList(response.body()?.tmdbFilms)
 
                 repository.putToDb(list)
-                callback.onSuccess(list)
+                callback.onSuccess()
             }
 
             override fun onFailure(call: Call<TmdbResult>, t: Throwable) {
@@ -36,5 +37,5 @@ class Interactor(private val repository: MainRepository, private val retrofitSer
     }
     fun getDefaultCategoryFromPreference() = preferences.getDefaultCategory()
 
-    fun getFilmsFromDB(): List<Film> = repository.getAllFromDB()
+    fun getFilmsFromDB(): LiveData<List<Film>> = repository.getAllFromDB()
 }

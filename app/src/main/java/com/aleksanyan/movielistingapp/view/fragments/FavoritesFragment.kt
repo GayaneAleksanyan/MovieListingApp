@@ -12,7 +12,6 @@ import com.aleksanyan.movielistingapp.utils.AnimationHelper
 import com.aleksanyan.movielistingapp.view.MainActivity
 import com.aleksanyan.movielistingapp.view.rv_adapters.FilmListRecyclerAdapter
 import com.aleksanyan.movielistingapp.view.rv_adapters.TopSpacingItemDecoration
-import kotlinx.android.synthetic.main.fragment_favorites.favorites_fragment_root
 
 class FavoritesFragment : Fragment() {
     private lateinit var filmsAdapter: FilmListRecyclerAdapter
@@ -34,7 +33,7 @@ class FavoritesFragment : Fragment() {
 
 
         AnimationHelper.performFragmentCircularRevealAnimation(
-            favorites_fragment_root,
+            binding.favoritesFragmentRoot,
             requireActivity(),
             2
         )

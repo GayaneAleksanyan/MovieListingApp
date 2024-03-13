@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.aleksanyan.movielistingapp.view.rv_viewholders.FilmViewHolder
 import com.aleksanyan.movielistingapp.R
 import com.aleksanyan.movielistingapp.data.Entity.Film
-import kotlinx.android.synthetic.main.film_item.view.*
 
 class FilmListRecyclerAdapter(private val clickListener: OnItemClickListener) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -27,7 +26,7 @@ class FilmListRecyclerAdapter(private val clickListener: OnItemClickListener) :
         when (holder) {
             is FilmViewHolder -> {
                 holder.bind(items[position])
-                holder.itemView.item_container.setOnClickListener {
+                holder.itemView.setOnClickListener {
                     clickListener.click(items[position])
                 }
             }

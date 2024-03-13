@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.aleksanyan.movielistingapp.databinding.FragmentSelectionsBinding
 import com.aleksanyan.movielistingapp.utils.AnimationHelper
-import kotlinx.android.synthetic.main.fragment_selections.selections_fragment_root
 
 class SelectionsFragment : Fragment() {
     private lateinit var binding: FragmentSelectionsBinding
@@ -23,7 +22,7 @@ class SelectionsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         AnimationHelper.performFragmentCircularRevealAnimation(
-            selections_fragment_root,
+            binding.selectionsFragmentRoot,
             requireActivity(),
             4
         )

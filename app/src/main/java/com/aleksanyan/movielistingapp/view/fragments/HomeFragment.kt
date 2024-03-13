@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -16,9 +17,6 @@ import com.aleksanyan.movielistingapp.view.MainActivity
 import com.aleksanyan.movielistingapp.view.rv_adapters.FilmListRecyclerAdapter
 import com.aleksanyan.movielistingapp.view.rv_adapters.TopSpacingItemDecoration
 import com.aleksanyan.movielistingapp.viewmodel.HomeFragmentViewModel
-import kotlinx.android.synthetic.main.fragment_home.home_fragment_root
-import kotlinx.android.synthetic.main.fragment_home.main_recycler
-import kotlinx.android.synthetic.main.fragment_home.search_view
 import java.util.Locale
 
 class HomeFragment : Fragment() {
@@ -52,7 +50,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         AnimationHelper.performFragmentCircularRevealAnimation(
-            home_fragment_root,
+            binding.homeFragmentRoot,
             requireActivity(),
             1
         )
@@ -67,15 +65,19 @@ class HomeFragment : Fragment() {
             filmsDataBase = it
             filmsAdapter.addItems(it)
         })
+
+        viewModel.showProgressBar.observe(viewLifecycleOwner, Observer<Boolean> {
+            binding.progressBar.isVisible = it
+        })
     }
 
     private fun initSearchView() {
-        search_view.setOnClickListener {
-            search_view.isIconified = false
+        binding.searchView.setOnClickListener {
+            binding.searchView.isIconified = false
         }
 
-        search_view.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        override fun onQueryTextSubmit(query: String?): Boolean {
                 return true
             }
 
@@ -95,7 +97,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun initRecycler() {
-        main_recycler.apply {
+
+        binding.mainRecycler.apply {
             filmsAdapter =
                 FilmListRecyclerAdapter(object : FilmListRecyclerAdapter.OnItemClickListener {
                     override fun click(film: Film) {
