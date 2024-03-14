@@ -23,5 +23,9 @@
     <dimen name="srl_height">0dp</dimen>
     <dimen name="pb_width">100dp</dimen>
     <dimen name="pb_height">100dp</dimen>
+    <dimen name="fab_tx">72dp</dimen>
+    <dimen name="pgb_width">50dp</dimen>
+    <dimen name="pgb_height">50dp</dimen>
+    <dimen name="pg_transZ">10dp</dimen>
 
 </resources>

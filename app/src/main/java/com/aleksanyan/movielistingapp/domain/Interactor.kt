@@ -1,7 +1,7 @@
 package com.aleksanyan.movielistingapp.domain
 
 import androidx.lifecycle.LiveData
-import com.aleksanyan.movielistingapp.data.Entity.Film
+import com.aleksanyan.movielistingapp.data.entity.Film
 import com.aleksanyan.movielistingapp.data.entity.API
 import com.aleksanyan.movielistingapp.data.entity.TmdbResult
 import com.aleksanyan.movielistingapp.data.MainRepository

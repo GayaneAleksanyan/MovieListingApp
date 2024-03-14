@@ -14,4 +14,7 @@
     <string name="radio_button_upcoming">Coming Soon</string>
     <string name="radio_button_playing">Released</string>
     <string name="radio_group_header">Order by:</string>
+    <string name="permission_storage">No permission. Please, grant permission.</string>
+    <string name="downloaded_to_gallery">"Saved to Gallery"</string>
+    <string name="open">To Gallery</string>
 </resources>

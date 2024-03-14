@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.aleksanyan.movielistingapp.data.Entity.Film
+import com.aleksanyan.movielistingapp.data.entity.Film
 import com.aleksanyan.movielistingapp.databinding.FragmentFavoritesBinding
 import com.aleksanyan.movielistingapp.utils.AnimationHelper
 import com.aleksanyan.movielistingapp.view.MainActivity
