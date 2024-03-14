@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.aleksanyan.movielistingapp.App
-import com.aleksanyan.movielistingapp.data.Entity.Film
+import com.aleksanyan.movielistingapp.data.entity.Film
 import com.aleksanyan.movielistingapp.domain.Interactor
 import javax.inject.Inject
 

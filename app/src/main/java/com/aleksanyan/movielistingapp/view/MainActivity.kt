@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.aleksanyan.movielistingapp.R
-import com.aleksanyan.movielistingapp.data.Entity.Film
+import com.aleksanyan.movielistingapp.data.entity.Film
 import com.aleksanyan.movielistingapp.databinding.ActivityMainBinding
 import com.aleksanyan.movielistingapp.view.fragments.*
 
